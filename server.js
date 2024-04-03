@@ -3,10 +3,12 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const csv = require('csv-parser');
 const Profile = require('./schema')
+const dotenv = require('dotenv')
 
 const app = express();
+dotenv.config()
 
-const uri = "mongodb+srv://bhaskar170863:babu123@cluster0.eomvnpx.mongodb.net/profile?retryWrites=true&w=majority";
+const uri = process.env.URI
 
 const connectDb = async () => {
     try {
