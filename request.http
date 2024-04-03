@@ -1,0 +1,7 @@
+###
+POST http://localhost:4001/import-csv
+Content-Type: application/json
+
+{
+    "filePath": "D:/Extensions/mongoDB-import/emp.csv"
+}
